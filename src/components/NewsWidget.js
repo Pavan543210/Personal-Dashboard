@@ -14,7 +14,7 @@ const NewsWidget = ({ defaultLocation = 'India' }) => {
   const fetchNews = async (location) => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?q=${location}&apiKey=0866a702054c4f799785c32622f32896&pageSize=5`
+        `https://newsapi.org/v2/top-headlines?q=${location}&apiKey=${process.env.REACT_APP_NEWSAPI_API_KEY}&pageSize=5`
       );
       setNews(response.data.articles);
       setError(null);
