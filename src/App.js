@@ -2,7 +2,8 @@ import React from 'react';
 import './scss/styles.scss';
 import WeatherWidget from './components/WeatherWidget';
 import NewsWidget from './components/NewsWidget';
-
+axios.defaults.httpAgent.protocol = 'http:';
+axios.defaults.httpsAgent.protocol = 'https:';
 
 function App() {
   return (
